@@ -28,7 +28,7 @@ them. Almohawell support Rpm,Deb,Tgz and others.
 غيرها.
 
 %prep
-%setup -qn %{name}
+%setup -q -n %{name}-%{commit}
 
 %build
 #nothing to build
