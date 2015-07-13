@@ -2,24 +2,24 @@
 %global owner moceap
 %global commit #Write commit here
 
-Name:				almohawell
-Version:			9.3.2
-Release:			3%{?dist}
-License:			GPLv2+
-Summary:			Linux Packages Installer and Convertor
-Summary(ar):		حوّل و ثبّت أنواعًا مُتعددة من الحُزم
-Source:				https://github.com/%{owner}/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
-Requires:			perl
-Requires:			dpkg
-Requires:			debhelper
-Requires:			rpm-build
-BuildArch:          noarch
-URL:				http://almohawell.sf.net
+Name: almohawell
+Version: 9.3.2
+Release: 4%{?dist}
+License: GPLv2+
+Summary: Linux Packages Installer and Convertor
+Summary(ar): حوّل و ثبّت أنواعًا مُتعددة من الحُزم
+Source: https://github.com/%{owner}/%{name}/archive/%{commit}/%{name}-%{commit}.tar.gz
+Requires: perl
+Requires: dpkg
+Requires: debhelper
+Requires: rpm-build
+BuildArch: noarch
+URL: http://almohawell.sf.net
 
 %description
 Almohawell is a tool to install any type of Linux
 packages on any distro, and can convert between
-them. Almohawell support Rpm,Deb,Tgz and others.
+them. Almohawell support Rpm, Deb, Tgz and others.
 
 %description -l ar
 يُعدّ المحوّل كأداة لتثبيت أي نوع من حزم لينُكس على
@@ -39,11 +39,17 @@ make install DESTDIR=%{buildroot}
 %files
 %doc README
 %license LICENSE gpl-2.0.txt
+%{_mandir}/*/%{name}.*
 %{_bindir}/almohawell
 %{almohawelllib}/Almohawell/Package/*.pm
 %{almohawelllib}/Almohawell/Package.pm
 
 %changelog
+* Mon Jul 13 2015 Mosaab Alzoubi <moceap@hotmail.com> - 9.3.2-4
+- Add some spaces to %%description
+- Fix attr of some files
+- Add man pages
+
 * Sat Jul 11 2015 Mosaab Alzoubi <moceap@hotmail.com> - 9.3.2-3
 - Separate requires
 - Add #Nothing to build note

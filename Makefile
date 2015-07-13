@@ -14,13 +14,14 @@ install:
 	mkdir -p $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
 	mkdir -p $(DESTDIR)$(prefix)/bin
 	install -m 0755 almohawell $(DESTDIR)$(prefix)/bin
-	install -m 0755 Package.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell
-	install -m 0755 Rpm.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
-	install -m 0755 Deb.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
-	install -m 0755 Lsb.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
-	install -m 0755 Pkg.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
-	install -m 0755 Slp.pm  $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
-	install -m 0755 Tgz.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Package.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell
+	install -m 0644 Rpm.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Deb.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Lsb.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Pkg.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Slp.pm  $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 Tgz.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	install -m 0644 almohawell.1.gz $(DESTDIR)$(prefix)/share/man/man1
 
 uninstall:
 	rm -rf $(DESTDIR)$(prefix)/lib/Almohawell
