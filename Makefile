@@ -12,6 +12,7 @@ all:
 
 install:
 	mkdir -p $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell/Package
+	mkdir -p $(DESTDIR)$(prefix)/share/man/man1
 	mkdir -p $(DESTDIR)$(prefix)/bin
 	install -m 0755 almohawell $(DESTDIR)$(prefix)/bin
 	install -m 0644 Package.pm $(DESTDIR)$(prefix)/lib/Almohawell/Almohawell
